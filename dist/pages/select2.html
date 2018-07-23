@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title></title>
+
+
+    <link rel="stylesheet" href="../js/select2/select2.min.css" />
+
+    <script>
+        function aa(arg1) {
+            var bb = function(arg2) {
+                return arg1 + arg2;
+            }
+            return bb;
+        }
+        var log = aa(1)(1);
+        console.log(log);
+    </script>
+
+</head>
+
+<body>
+
+    <select id="select1" multiple="multiple" style="width:200px;display:block;margin:300px;">
+
+        <option value="0">西瓜</option>
+
+        <option value="1">苹果</option>
+
+        <option value="2">橘子</option>
+
+    </select>
+
+</body>
+
+<script type="text/javascript" src="../js/jquery.min.js">
+</script>
+
+<script src="../js/select2/select2.js"></script>
+
+<script>
+    $('#select1').select2();
+
+    $('#select1').val(['1']).trigger('change'); //这个就是select2的赋值方式。而val里的就是option的value
+    console.log($('#select1').val())
+</script>
+
+</html>

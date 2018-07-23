@@ -2,11 +2,72 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <title>雪花飘落</title>
+    <style>
+        html{  
+            max-width: 720px;  
+              
+        }  
+        body{  
+            width: 100%;  
+            height: 100%;  
+            margin: 0 auto;  
+            overflow-x: hidden;  
+        }  
+        .snow{  
+            width: 100%;  
+            height: 100%;  
+            background: pink;  
+            overflow: hidden;  
+        }  
+        .snow_img{
+            width: 8px;
+            height: 8px;
+            color: white;  
+            position: absolute;  
+            top: -50px;  
+            margin-left: 1px;  
+        }  
+    </style>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){  
+            $('body').css("height",$(window).height())  
+            var wid=document.getElementsByClassName('snow')[0].clientWidth;  
+            // var html_snow="<span class='snow_img'>*</span>";
+            setInterval(function(){
+                var html_snow = document.createElement("span");
+                html_snow.className = 'snow_img';
+                var html_snow_text = document.createTextNode('*');
+                html_snow.appendChild(html_snow_text);  
+                document.getElementsByClassName('snow')[0].appendChild(html_snow);
+                snowFlow();
+            },100);  
+            function snowFlow(){  
+                $('.snow_img').each(function(index){  
+                    var snow_time=(Math.random()*10+4)*1000;  
+                    var wid_snow=Math.floor(Math.random()*40+5)+'px';  
+                    var float_left=Math.random()*wid*2-wid+"px";  
+                    var wid_left=Math.random()*wid+"px";  
+                    if($(this).css("margin-left")==1+"px"){  
+                        $(this).css("margin-left",wid_left);  
+                    }  
+                    if($(this).width()==0 || $(this).width()==50 ){  
+                        $(this).width(wid_snow);  
+                    }  
+                    $(this).animate({top:800+"px",left:float_left,},snow_time);  
+                    if($(this).offset().top==800){  
+                        $(this).remove();  
+                    }  
+                })  
+            }
+        });  
+    </script>
 </head>
 <body>
-<h1>111</h1>
+    <div class="snow"></div>
 </body>
 </html>

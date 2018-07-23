@@ -1,0 +1,64 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js test
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/micheal/.composer/vendor/bin:/Users/baobao/Desktop/unit/arcanist/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.10.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "h5-example",
+    "version": "1.0.0",
+    "description": "移动端webView例子",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node index.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/cuiyibao/h5-example.git"
+    },
+    "keywords": [
+      "web",
+      "example"
+    ],
+    "author": "bao",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/cuiyibao/h5-example/issues"
+    },
+    "homepage": "https://github.com/cuiyibao/h5-example#readme",
+    "devDependencies": {
+      "webpack": "^4.5.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c echo "Error: no test specified" && exit 1
+  Directory: /Users/baobao/Desktop/github/html-spa/h5-example
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:180:13)
+      at maybeClose (internal/child_process.js:936:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
