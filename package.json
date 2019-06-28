@@ -1,0 +1,27 @@
+{
+  "name": "h5-example",
+  "version": "1.0.0",
+  "description": "移动端webView例子",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuiyibao/h5-example.git"
+  },
+  "keywords": [
+    "web",
+    "example"
+  ],
+  "author": "bao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuiyibao/h5-example/issues"
+  },
+  "homepage": "https://github.com/cuiyibao/h5-example#readme",
+  "devDependencies": {
+    "webpack": "^4.5.0"
+  }
+}
